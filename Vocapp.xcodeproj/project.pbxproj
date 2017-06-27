@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53DD04651F02B17500125110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04641F02B17500125110 /* AppDelegate.swift */; };
+		53DD04671F02B17500125110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04661F02B17500125110 /* ViewController.swift */; };
+		53DD046A1F02B17500125110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04681F02B17500125110 /* Main.storyboard */; };
+		53DD046C1F02B17500125110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DD046B1F02B17500125110 /* Assets.xcassets */; };
+		53DD046F1F02B17500125110 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DD046D1F02B17500125110 /* LaunchScreen.storyboard */; };
+		53DD04741F02B17500125110 /* Vocapp WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 53DD04731F02B17500125110 /* Vocapp WatchKit App.app */; };
+		53DD047A1F02B17500125110 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04781F02B17500125110 /* Interface.storyboard */; };
+		53DD047C1F02B17500125110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DD047B1F02B17500125110 /* Assets.xcassets */; };
+		53DD04831F02B17500125110 /* Vocapp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 53DD04821F02B17500125110 /* Vocapp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		53DD048A1F02B17500125110 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04891F02B17500125110 /* InterfaceController.swift */; };
+		53DD048C1F02B17500125110 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD048B1F02B17500125110 /* ExtensionDelegate.swift */; };
+		53DD048E1F02B17500125110 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD048D1F02B17500125110 /* NotificationController.swift */; };
+		53DD04901F02B17500125110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DD048F1F02B17500125110 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53DD04751F02B17500125110 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53DD04591F02B17500125110 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DD04721F02B17500125110;
+			remoteInfo = "Vocapp WatchKit App";
+		};
+		53DD04841F02B17500125110 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53DD04591F02B17500125110 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DD04811F02B17500125110;
+			remoteInfo = "Vocapp WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		53DD04971F02B17500125110 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				53DD04831F02B17500125110 /* Vocapp WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DD049B1F02B17500125110 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				53DD04741F02B17500125110 /* Vocapp WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		53DD04611F02B17500125110 /* Vocapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vocapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DD04641F02B17500125110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		53DD04661F02B17500125110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		53DD04691F02B17500125110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53DD046B1F02B17500125110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53DD046E1F02B17500125110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53DD04701F02B17500125110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53DD04731F02B17500125110 /* Vocapp WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vocapp WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DD04791F02B17500125110 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		53DD047B1F02B17500125110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53DD047D1F02B17500125110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53DD04821F02B17500125110 /* Vocapp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vocapp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DD04881F02B17500125110 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		53DD04891F02B17500125110 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		53DD048B1F02B17500125110 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		53DD048D1F02B17500125110 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		53DD048F1F02B17500125110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53DD04911F02B17500125110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53DD045E1F02B17500125110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DD047F1F02B17500125110 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53DD04581F02B17500125110 = {
+			isa = PBXGroup;
+			children = (
+				53DD04631F02B17500125110 /* Vocapp */,
+				53DD04771F02B17500125110 /* Vocapp WatchKit App */,
+				53DD04861F02B17500125110 /* Vocapp WatchKit Extension */,
+				53DD04621F02B17500125110 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53DD04621F02B17500125110 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53DD04611F02B17500125110 /* Vocapp.app */,
+				53DD04731F02B17500125110 /* Vocapp WatchKit App.app */,
+				53DD04821F02B17500125110 /* Vocapp WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53DD04631F02B17500125110 /* Vocapp */ = {
+			isa = PBXGroup;
+			children = (
+				53DD04641F02B17500125110 /* AppDelegate.swift */,
+				53DD04661F02B17500125110 /* ViewController.swift */,
+				53DD04681F02B17500125110 /* Main.storyboard */,
+				53DD046B1F02B17500125110 /* Assets.xcassets */,
+				53DD046D1F02B17500125110 /* LaunchScreen.storyboard */,
+				53DD04701F02B17500125110 /* Info.plist */,
+			);
+			path = Vocapp;
+			sourceTree = "<group>";
+		};
+		53DD04771F02B17500125110 /* Vocapp WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				53DD04781F02B17500125110 /* Interface.storyboard */,
+				53DD047B1F02B17500125110 /* Assets.xcassets */,
+				53DD047D1F02B17500125110 /* Info.plist */,
+			);
+			path = "Vocapp WatchKit App";
+			sourceTree = "<group>";
+		};
+		53DD04861F02B17500125110 /* Vocapp WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				53DD04891F02B17500125110 /* InterfaceController.swift */,
+				53DD048B1F02B17500125110 /* ExtensionDelegate.swift */,
+				53DD048D1F02B17500125110 /* NotificationController.swift */,
+				53DD048F1F02B17500125110 /* Assets.xcassets */,
+				53DD04911F02B17500125110 /* Info.plist */,
+				53DD04871F02B17500125110 /* Supporting Files */,
+			);
+			path = "Vocapp WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		53DD04871F02B17500125110 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				53DD04881F02B17500125110 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53DD04601F02B17500125110 /* Vocapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53DD049C1F02B17500125110 /* Build configuration list for PBXNativeTarget "Vocapp" */;
+			buildPhases = (
+				53DD045D1F02B17500125110 /* Sources */,
+				53DD045E1F02B17500125110 /* Frameworks */,
+				53DD045F1F02B17500125110 /* Resources */,
+				53DD049B1F02B17500125110 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53DD04761F02B17500125110 /* PBXTargetDependency */,
+			);
+			name = Vocapp;
+			productName = Vocapp;
+			productReference = 53DD04611F02B17500125110 /* Vocapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53DD04721F02B17500125110 /* Vocapp WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53DD04981F02B17500125110 /* Build configuration list for PBXNativeTarget "Vocapp WatchKit App" */;
+			buildPhases = (
+				53DD04711F02B17500125110 /* Resources */,
+				53DD04971F02B17500125110 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53DD04851F02B17500125110 /* PBXTargetDependency */,
+			);
+			name = "Vocapp WatchKit App";
+			productName = "Vocapp WatchKit App";
+			productReference = 53DD04731F02B17500125110 /* Vocapp WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		53DD04811F02B17500125110 /* Vocapp WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53DD04941F02B17500125110 /* Build configuration list for PBXNativeTarget "Vocapp WatchKit Extension" */;
+			buildPhases = (
+				53DD047E1F02B17500125110 /* Sources */,
+				53DD047F1F02B17500125110 /* Frameworks */,
+				53DD04801F02B17500125110 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Vocapp WatchKit Extension";
+			productName = "Vocapp WatchKit Extension";
+			productReference = 53DD04821F02B17500125110 /* Vocapp WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53DD04591F02B17500125110 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = vocapp;
+				TargetAttributes = {
+					53DD04601F02B17500125110 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 64AA6VGY67;
+						ProvisioningStyle = Automatic;
+					};
+					53DD04721F02B17500125110 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 64AA6VGY67;
+						ProvisioningStyle = Automatic;
+					};
+					53DD04811F02B17500125110 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 64AA6VGY67;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 53DD045C1F02B17500125110 /* Build configuration list for PBXProject "Vocapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53DD04581F02B17500125110;
+			productRefGroup = 53DD04621F02B17500125110 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53DD04601F02B17500125110 /* Vocapp */,
+				53DD04721F02B17500125110 /* Vocapp WatchKit App */,
+				53DD04811F02B17500125110 /* Vocapp WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53DD045F1F02B17500125110 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DD046F1F02B17500125110 /* LaunchScreen.storyboard in Resources */,
+				53DD046C1F02B17500125110 /* Assets.xcassets in Resources */,
+				53DD046A1F02B17500125110 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DD04711F02B17500125110 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DD047C1F02B17500125110 /* Assets.xcassets in Resources */,
+				53DD047A1F02B17500125110 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DD04801F02B17500125110 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DD04901F02B17500125110 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53DD045D1F02B17500125110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DD04671F02B17500125110 /* ViewController.swift in Sources */,
+				53DD04651F02B17500125110 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DD047E1F02B17500125110 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DD048E1F02B17500125110 /* NotificationController.swift in Sources */,
+				53DD048C1F02B17500125110 /* ExtensionDelegate.swift in Sources */,
+				53DD048A1F02B17500125110 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53DD04761F02B17500125110 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DD04721F02B17500125110 /* Vocapp WatchKit App */;
+			targetProxy = 53DD04751F02B17500125110 /* PBXContainerItemProxy */;
+		};
+		53DD04851F02B17500125110 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DD04811F02B17500125110 /* Vocapp WatchKit Extension */;
+			targetProxy = 53DD04841F02B17500125110 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		53DD04681F02B17500125110 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53DD04691F02B17500125110 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		53DD046D1F02B17500125110 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53DD046E1F02B17500125110 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		53DD04781F02B17500125110 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53DD04791F02B17500125110 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53DD04921F02B17500125110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		53DD04931F02B17500125110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53DD04951F02B17500125110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 64AA6VGY67;
+				INFOPLIST_FILE = "Vocapp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vocapp.Vocapp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		53DD04961F02B17500125110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = 64AA6VGY67;
+				INFOPLIST_FILE = "Vocapp WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vocapp.Vocapp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		53DD04991F02B17500125110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64AA6VGY67;
+				IBSC_MODULE = Vocapp_WatchKit_Extension;
+				INFOPLIST_FILE = "Vocapp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = vocapp.Vocapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		53DD049A1F02B17500125110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64AA6VGY67;
+				IBSC_MODULE = Vocapp_WatchKit_Extension;
+				INFOPLIST_FILE = "Vocapp WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = vocapp.Vocapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		53DD049D1F02B17500125110 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64AA6VGY67;
+				INFOPLIST_FILE = Vocapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vocapp.Vocapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		53DD049E1F02B17500125110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64AA6VGY67;
+				INFOPLIST_FILE = Vocapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = vocapp.Vocapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53DD045C1F02B17500125110 /* Build configuration list for PBXProject "Vocapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DD04921F02B17500125110 /* Debug */,
+				53DD04931F02B17500125110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53DD04941F02B17500125110 /* Build configuration list for PBXNativeTarget "Vocapp WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DD04951F02B17500125110 /* Debug */,
+				53DD04961F02B17500125110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		53DD04981F02B17500125110 /* Build configuration list for PBXNativeTarget "Vocapp WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DD04991F02B17500125110 /* Debug */,
+				53DD049A1F02B17500125110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		53DD049C1F02B17500125110 /* Build configuration list for PBXNativeTarget "Vocapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DD049D1F02B17500125110 /* Debug */,
+				53DD049E1F02B17500125110 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53DD04591F02B17500125110 /* Project object */;
+}
