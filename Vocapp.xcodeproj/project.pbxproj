@@ -20,6 +20,15 @@
 		53DD048C1F02B17500125110 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD048B1F02B17500125110 /* ExtensionDelegate.swift */; };
 		53DD048E1F02B17500125110 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD048D1F02B17500125110 /* NotificationController.swift */; };
 		53DD04901F02B17500125110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DD048F1F02B17500125110 /* Assets.xcassets */; };
+		53DD04A01F02BCF100125110 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD049F1F02BCF100125110 /* NotificationsManager.swift */; };
+		53DD04A91F02C46A00125110 /* WordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04A71F02C46A00125110 /* WordsVC.swift */; };
+		53DD04AA1F02C46A00125110 /* WordsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04A81F02C46A00125110 /* WordsVC.xib */; };
+		53DD04AD1F02C48700125110 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04AB1F02C48700125110 /* SettingsVC.swift */; };
+		53DD04AE1F02C48700125110 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04AC1F02C48700125110 /* SettingsVC.xib */; };
+		53DD04B01F02C77300125110 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04AF1F02C77300125110 /* Section.swift */; };
+		53DD04B21F02C78F00125110 /* WordExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B11F02C78F00125110 /* WordExample.swift */; };
+		53DD04B51F02C90300125110 /* WordExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B31F02C90300125110 /* WordExampleCell.swift */; };
+		53DD04B61F02C90300125110 /* WordExampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04B41F02C90300125110 /* WordExampleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +92,15 @@
 		53DD048D1F02B17500125110 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		53DD048F1F02B17500125110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53DD04911F02B17500125110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53DD049F1F02BCF100125110 /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
+		53DD04A71F02C46A00125110 /* WordsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsVC.swift; sourceTree = "<group>"; };
+		53DD04A81F02C46A00125110 /* WordsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordsVC.xib; sourceTree = "<group>"; };
+		53DD04AB1F02C48700125110 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		53DD04AC1F02C48700125110 /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
+		53DD04AF1F02C77300125110 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		53DD04B11F02C78F00125110 /* WordExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordExample.swift; sourceTree = "<group>"; };
+		53DD04B31F02C90300125110 /* WordExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordExampleCell.swift; sourceTree = "<group>"; };
+		53DD04B41F02C90300125110 /* WordExampleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordExampleCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,12 +144,15 @@
 		53DD04631F02B17500125110 /* Vocapp */ = {
 			isa = PBXGroup;
 			children = (
+				53DD04A51F02C44500125110 /* Words */,
+				53DD04A61F02C44500125110 /* Settings */,
 				53DD04641F02B17500125110 /* AppDelegate.swift */,
 				53DD04661F02B17500125110 /* ViewController.swift */,
 				53DD04681F02B17500125110 /* Main.storyboard */,
 				53DD046B1F02B17500125110 /* Assets.xcassets */,
 				53DD046D1F02B17500125110 /* LaunchScreen.storyboard */,
 				53DD04701F02B17500125110 /* Info.plist */,
+				53DD049F1F02BCF100125110 /* NotificationsManager.swift */,
 			);
 			path = Vocapp;
 			sourceTree = "<group>";
@@ -165,6 +186,28 @@
 				53DD04881F02B17500125110 /* PushNotificationPayload.apns */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		53DD04A51F02C44500125110 /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				53DD04B11F02C78F00125110 /* WordExample.swift */,
+				53DD04AF1F02C77300125110 /* Section.swift */,
+				53DD04A71F02C46A00125110 /* WordsVC.swift */,
+				53DD04A81F02C46A00125110 /* WordsVC.xib */,
+				53DD04B31F02C90300125110 /* WordExampleCell.swift */,
+				53DD04B41F02C90300125110 /* WordExampleCell.xib */,
+			);
+			path = Words;
+			sourceTree = "<group>";
+		};
+		53DD04A61F02C44500125110 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				53DD04AB1F02C48700125110 /* SettingsVC.swift */,
+				53DD04AC1F02C48700125110 /* SettingsVC.xib */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,9 +318,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53DD04AA1F02C46A00125110 /* WordsVC.xib in Resources */,
 				53DD046F1F02B17500125110 /* LaunchScreen.storyboard in Resources */,
+				53DD04B61F02C90300125110 /* WordExampleCell.xib in Resources */,
 				53DD046C1F02B17500125110 /* Assets.xcassets in Resources */,
 				53DD046A1F02B17500125110 /* Main.storyboard in Resources */,
+				53DD04AE1F02C48700125110 /* SettingsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,8 +351,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53DD04B51F02C90300125110 /* WordExampleCell.swift in Sources */,
+				53DD04A91F02C46A00125110 /* WordsVC.swift in Sources */,
 				53DD04671F02B17500125110 /* ViewController.swift in Sources */,
 				53DD04651F02B17500125110 /* AppDelegate.swift in Sources */,
+				53DD04B01F02C77300125110 /* Section.swift in Sources */,
+				53DD04B21F02C78F00125110 /* WordExample.swift in Sources */,
+				53DD04A01F02BCF100125110 /* NotificationsManager.swift in Sources */,
+				53DD04AD1F02C48700125110 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
