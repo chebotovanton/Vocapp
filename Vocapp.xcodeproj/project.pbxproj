@@ -29,6 +29,9 @@
 		53DD04B21F02C78F00125110 /* WordExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B11F02C78F00125110 /* WordExample.swift */; };
 		53DD04B51F02C90300125110 /* WordExampleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B31F02C90300125110 /* WordExampleCell.swift */; };
 		53DD04B61F02C90300125110 /* WordExampleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04B41F02C90300125110 /* WordExampleCell.xib */; };
+		53DD04B81F040AFD00125110 /* WordsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B71F040AFD00125110 /* WordsLoader.swift */; };
+		53DD04BB1F0414C700125110 /* WordTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B91F0414C700125110 /* WordTableHeader.swift */; };
+		53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04BA1F0414C700125110 /* WordTableHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,9 @@
 		53DD04B11F02C78F00125110 /* WordExample.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordExample.swift; sourceTree = "<group>"; };
 		53DD04B31F02C90300125110 /* WordExampleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordExampleCell.swift; sourceTree = "<group>"; };
 		53DD04B41F02C90300125110 /* WordExampleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordExampleCell.xib; sourceTree = "<group>"; };
+		53DD04B71F040AFD00125110 /* WordsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsLoader.swift; sourceTree = "<group>"; };
+		53DD04B91F0414C700125110 /* WordTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordTableHeader.swift; sourceTree = "<group>"; };
+		53DD04BA1F0414C700125110 /* WordTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordTableHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,7 @@
 				53DD046D1F02B17500125110 /* LaunchScreen.storyboard */,
 				53DD04701F02B17500125110 /* Info.plist */,
 				53DD049F1F02BCF100125110 /* NotificationsManager.swift */,
+				53DD04B71F040AFD00125110 /* WordsLoader.swift */,
 			);
 			path = Vocapp;
 			sourceTree = "<group>";
@@ -197,6 +204,8 @@
 				53DD04A81F02C46A00125110 /* WordsVC.xib */,
 				53DD04B31F02C90300125110 /* WordExampleCell.swift */,
 				53DD04B41F02C90300125110 /* WordExampleCell.xib */,
+				53DD04B91F0414C700125110 /* WordTableHeader.swift */,
+				53DD04BA1F0414C700125110 /* WordTableHeader.xib */,
 			);
 			path = Words;
 			sourceTree = "<group>";
@@ -321,6 +330,7 @@
 				53DD04AA1F02C46A00125110 /* WordsVC.xib in Resources */,
 				53DD046F1F02B17500125110 /* LaunchScreen.storyboard in Resources */,
 				53DD04B61F02C90300125110 /* WordExampleCell.xib in Resources */,
+				53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */,
 				53DD046C1F02B17500125110 /* Assets.xcassets in Resources */,
 				53DD046A1F02B17500125110 /* Main.storyboard in Resources */,
 				53DD04AE1F02C48700125110 /* SettingsVC.xib in Resources */,
@@ -355,8 +365,10 @@
 				53DD04A91F02C46A00125110 /* WordsVC.swift in Sources */,
 				53DD04671F02B17500125110 /* ViewController.swift in Sources */,
 				53DD04651F02B17500125110 /* AppDelegate.swift in Sources */,
+				53DD04B81F040AFD00125110 /* WordsLoader.swift in Sources */,
 				53DD04B01F02C77300125110 /* Section.swift in Sources */,
 				53DD04B21F02C78F00125110 /* WordExample.swift in Sources */,
+				53DD04BB1F0414C700125110 /* WordTableHeader.swift in Sources */,
 				53DD04A01F02BCF100125110 /* NotificationsManager.swift in Sources */,
 				53DD04AD1F02C48700125110 /* SettingsVC.swift in Sources */,
 			);
@@ -623,6 +635,7 @@
 				53DD04961F02B17500125110 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53DD04981F02B17500125110 /* Build configuration list for PBXNativeTarget "Vocapp WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -631,6 +644,7 @@
 				53DD049A1F02B17500125110 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53DD049C1F02B17500125110 /* Build configuration list for PBXNativeTarget "Vocapp" */ = {
 			isa = XCConfigurationList;
@@ -639,6 +653,7 @@
 				53DD049E1F02B17500125110 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

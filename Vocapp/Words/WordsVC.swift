@@ -9,8 +9,9 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
+private let headerIdentifier = "Header"
 
-class WordsVC: UICollectionViewController {
+class WordsVC: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
     var sections: [Section] = []
     
@@ -19,13 +20,25 @@ class WordsVC: UICollectionViewController {
 
         sections = createFakeSections()
         collectionView!.register(UINib(nibName: "WordExampleCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView?.register(UINib(nibName: "WordTableHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
+
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.itemSize = CGSize(width: view.frame.width, height: 50)
+        collectionView?.collectionViewLayout = layout
     }
 
     func createFakeSections() -> [Section] {
-        let items1 = [WordExample(text: "Text", translation: "Текст"), WordExample(text: "House", translation: "Дом"), WordExample(text: "Cat", translation: "Кошка")]
-        let items2 = [WordExample(text: "Chair", translation: "Стул"), WordExample(text: "Table", translation: "Стол")]
+        let words = WordsLoader.shared.loadWords()
+        var result: [Section] = []
+        for i in 0..<words.count {
+            let dayWords = words[i]
+            let title = "day" + String(i)
+            let section = Section(title: title, examples: dayWords)
+            result.append(section)
+        }
 
-        return [Section(examples: items1), Section(examples: items2)]
+        return result
     }
 
     // MARK: UICollectionViewDataSource
@@ -33,7 +46,6 @@ class WordsVC: UICollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return sections.count
     }
-
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return sections[section].examples.count
@@ -48,35 +60,15 @@ class WordsVC: UICollectionViewController {
         return cell
     }
 
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return CGSize(width: view.frame.width, height: 50)
     }
 
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, for: indexPath) as! WordTableHeader
+        let section = sections[indexPath.section]
+        header.setupWithTitle(title: section.title)
 
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
+        return header
     }
-    */
-    
 }

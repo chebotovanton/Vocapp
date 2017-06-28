@@ -14,20 +14,36 @@ class NotificationsManager: NSObject {
     static let shared = NotificationsManager()
 
     func authorize() {
-        UNUserNotificationCenter.current().requestAuthorization(options: .alert) { (success, error) in }
+        UNUserNotificationCenter.current().requestAuthorization(options: .alert) { (success, error) in
+            DispatchQueue.main.async {
+                self.setScheduledNotifications()
+            }
+        }
     }
 
-    func setNotificationAfter(interval: TimeInterval) {
+    func setNotificationAfter(interval: TimeInterval, title: String, body:String) {
         let content = UNMutableNotificationContent()
-        content.title = "I am the notification"
-        content.body = "Gotta be shown on your watch"
+        content.title = title
+        content.body = body
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
-        let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: title+body, content: content, trigger: trigger)
         UNUserNotificationCenter.current().add(request) { (err) in
             if let error = err {
                 NSLog(error.localizedDescription)
             }
+        }
+    }
+
+    private func setScheduledNotifications() {
+        let words = WordsLoader.shared.loadWords()
+        var offset: TimeInterval = 0
+        for dayWords in words {
+            for word in dayWords {
+                offset += 5
+                setNotificationAfter(interval: offset, title: word.text, body: word.translation)
+            }
+            offset += 60
         }
     }
 }

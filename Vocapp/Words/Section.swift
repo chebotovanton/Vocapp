@@ -9,9 +9,11 @@
 import UIKit
 
 class Section: NSObject {
+    let title: String
     let examples: [WordExample]
 
-    init(examples: [WordExample]) {
+    init(title:String, examples: [WordExample]) {
+        self.title = title
         self.examples = examples
     }
 }
