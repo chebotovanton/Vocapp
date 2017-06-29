@@ -23,7 +23,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="rHW-7F-D0J"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settingsTabIcon" id="rHW-7F-D0J"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m2x-RZ-d2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -82,7 +82,7 @@
                             <constraint firstItem="QsK-l9-Xuq" firstAttribute="top" secondItem="Qbs-TL-uYz" secondAttribute="bottom" id="ae0-5s-qcO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="udW-jl-Sc5"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="wordsTabIcon" id="udW-jl-Sc5"/>
                     <connections>
                         <outlet property="collectionView" destination="Qbs-TL-uYz" id="6et-4M-2aN"/>
                     </connections>
@@ -92,5 +92,9 @@
             <point key="canvasLocation" x="1905" y="-160"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="settingsTabIcon" width="24" height="24"/>
+        <image name="wordsTabIcon" width="24" height="24"/>
+    </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

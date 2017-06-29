@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		53144CA51F05667400E32E99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53144CA41F05667400E32E99 /* Images.xcassets */; };
 		53DD04651F02B17500125110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04641F02B17500125110 /* AppDelegate.swift */; };
 		53DD04671F02B17500125110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04661F02B17500125110 /* ViewController.swift */; };
 		53DD046A1F02B17500125110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04681F02B17500125110 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		53144CA41F05667400E32E99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		53DD04611F02B17500125110 /* Vocapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vocapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DD04641F02B17500125110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DD04661F02B17500125110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				53DD04701F02B17500125110 /* Info.plist */,
 				53DD049F1F02BCF100125110 /* NotificationsManager.swift */,
 				53DD04B71F040AFD00125110 /* WordsLoader.swift */,
+				53144CA41F05667400E32E99 /* Images.xcassets */,
 			);
 			path = Vocapp;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 			files = (
 				53DD046F1F02B17500125110 /* LaunchScreen.storyboard in Resources */,
 				53DD04B61F02C90300125110 /* WordExampleCell.xib in Resources */,
+				53144CA51F05667400E32E99 /* Images.xcassets in Resources */,
 				53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */,
 				53DD046C1F02B17500125110 /* Assets.xcassets in Resources */,
 				53DD046A1F02B17500125110 /* Main.storyboard in Resources */,
