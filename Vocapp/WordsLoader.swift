@@ -13,9 +13,39 @@ class WordsLoader: NSObject {
     static let shared = WordsLoader()
 
     func loadWords() -> [[WordExample]] {
-        let items1 = [WordExample(text: "Text", translation: "Текст"), WordExample(text: "House", translation: "Дом"), WordExample(text: "Cat", translation: "Кошка")]
-        let items2 = [WordExample(text: "Chair", translation: "Стул"), WordExample(text: "Table", translation: "Стол")]
+        let lines = loadStrings()
+        var result: [[WordExample]] = []
+        var i = 0
+        var dayWords: [WordExample] = []
+        while i < lines.count - 1 {
+            let text = lines[i]
+            let translation = lines[i+1]
 
-        return [items1, items2]
+            if text == "" {
+                result.append(dayWords)
+                dayWords = []
+                i += 1
+            } else {
+                dayWords.append(WordExample(text: text, translation: translation))
+                i += 2
+            }
+        }
+
+        result.append(dayWords)
+
+        return result
+    }
+
+    func loadStrings() -> [String] {
+        do {
+            if let path = Bundle.main.path(forResource: "Words", ofType: "txt"){
+                let text = try String(contentsOfFile:path, encoding: String.Encoding.utf8)
+                let lines = text.components(separatedBy: "\n")
+                return lines
+            }
+        } catch _ {
+            return []
+        }
+        return []
     }
 }
