@@ -22,7 +22,6 @@
 		53DD04901F02B17500125110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DD048F1F02B17500125110 /* Assets.xcassets */; };
 		53DD04A01F02BCF100125110 /* NotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD049F1F02BCF100125110 /* NotificationsManager.swift */; };
 		53DD04A91F02C46A00125110 /* WordsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04A71F02C46A00125110 /* WordsVC.swift */; };
-		53DD04AA1F02C46A00125110 /* WordsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04A81F02C46A00125110 /* WordsVC.xib */; };
 		53DD04AD1F02C48700125110 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04AB1F02C48700125110 /* SettingsVC.swift */; };
 		53DD04AE1F02C48700125110 /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04AC1F02C48700125110 /* SettingsVC.xib */; };
 		53DD04B01F02C77300125110 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04AF1F02C77300125110 /* Section.swift */; };
@@ -97,7 +96,6 @@
 		53DD04911F02B17500125110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53DD049F1F02BCF100125110 /* NotificationsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsManager.swift; sourceTree = "<group>"; };
 		53DD04A71F02C46A00125110 /* WordsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsVC.swift; sourceTree = "<group>"; };
-		53DD04A81F02C46A00125110 /* WordsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordsVC.xib; sourceTree = "<group>"; };
 		53DD04AB1F02C48700125110 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		53DD04AC1F02C48700125110 /* SettingsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
 		53DD04AF1F02C77300125110 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -201,7 +199,6 @@
 				53DD04B11F02C78F00125110 /* WordExample.swift */,
 				53DD04AF1F02C77300125110 /* Section.swift */,
 				53DD04A71F02C46A00125110 /* WordsVC.swift */,
-				53DD04A81F02C46A00125110 /* WordsVC.xib */,
 				53DD04B31F02C90300125110 /* WordExampleCell.swift */,
 				53DD04B41F02C90300125110 /* WordExampleCell.xib */,
 				53DD04B91F0414C700125110 /* WordTableHeader.swift */,
@@ -327,7 +324,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53DD04AA1F02C46A00125110 /* WordsVC.xib in Resources */,
 				53DD046F1F02B17500125110 /* LaunchScreen.storyboard in Resources */,
 				53DD04B61F02C90300125110 /* WordExampleCell.xib in Resources */,
 				53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */,

@@ -16,7 +16,9 @@ class WordExampleCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        contentView.layer.cornerRadius = 10
+        contentView.layer.cornerRadius = 12
+        let value = CGFloat(129.0 / 255.0)
+        contentView.backgroundColor = UIColor(red: value, green: value, blue: value, alpha: 0.7)
     }
 
     func setup(_ example: WordExample) {

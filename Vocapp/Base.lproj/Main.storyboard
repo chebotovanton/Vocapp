@@ -29,43 +29,6 @@
             </objects>
             <point key="canvasLocation" x="1815" y="633"/>
         </scene>
-        <!--Words-->
-        <scene sceneID="ZBZ-H6-7UI">
-            <objects>
-                <collectionViewController id="WUt-wM-8tG" customClass="WordsVC" customModule="Vocapp" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="9yO-uW-jgs">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3vN-bd-dVm">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="FIj-d6-Fec">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="WUt-wM-8tG" id="Kd5-4U-qjB"/>
-                            <outlet property="delegate" destination="WUt-wM-8tG" id="A5m-KM-dgQ"/>
-                        </connections>
-                    </collectionView>
-                    <tabBarItem key="tabBarItem" title="Words" id="Pco-GJ-DXY"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z1E-Av-JLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1814" y="-68"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qD5-SU-bes">
             <objects>
@@ -76,13 +39,57 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="WUt-wM-8tG" kind="relationship" relationship="viewControllers" id="ydC-u6-8q7"/>
+                        <segue destination="z3U-sE-YCo" kind="relationship" relationship="viewControllers" id="60k-Tk-r1v"/>
                         <segue destination="maa-Be-Z4g" kind="relationship" relationship="viewControllers" id="mZl-d6-wtI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9s-NL-Ov1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="646" y="286"/>
+        </scene>
+        <!--Words-->
+        <scene sceneID="cCW-n1-HaM">
+            <objects>
+                <viewController title="Words" id="z3U-sE-YCo" customClass="WordsVC" customModule="Vocapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ou4-zc-kKv"/>
+                        <viewControllerLayoutGuide type="bottom" id="QsK-l9-Xuq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9r7-9e-VJ5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qbs-TL-uYz">
+                                <rect key="frame" x="8" y="20" width="359" height="598"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nPM-td-sg1">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="z3U-sE-YCo" id="Oqv-nv-Zzk"/>
+                                    <outlet property="delegate" destination="z3U-sE-YCo" id="vL3-eI-awG"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qbs-TL-uYz" firstAttribute="top" secondItem="ou4-zc-kKv" secondAttribute="bottom" id="3hn-bh-LDx"/>
+                            <constraint firstItem="Qbs-TL-uYz" firstAttribute="leading" secondItem="9r7-9e-VJ5" secondAttribute="leading" constant="8" id="82m-7n-d0y"/>
+                            <constraint firstAttribute="trailing" secondItem="Qbs-TL-uYz" secondAttribute="trailing" constant="8" id="Vxh-hZ-lmY"/>
+                            <constraint firstItem="QsK-l9-Xuq" firstAttribute="top" secondItem="Qbs-TL-uYz" secondAttribute="bottom" id="ae0-5s-qcO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="udW-jl-Sc5"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Qbs-TL-uYz" id="6et-4M-2aN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3f-mF-XlM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="-160"/>
         </scene>
     </scenes>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
