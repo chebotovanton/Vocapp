@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		53144CA51F05667400E32E99 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53144CA41F05667400E32E99 /* Images.xcassets */; };
-		53144CA91F05751300E32E99 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 53144CA81F05751300E32E99 /* Words.txt */; };
 		53DD04651F02B17500125110 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04641F02B17500125110 /* AppDelegate.swift */; };
 		53DD04671F02B17500125110 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04661F02B17500125110 /* ViewController.swift */; };
 		53DD046A1F02B17500125110 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04681F02B17500125110 /* Main.storyboard */; };
@@ -33,6 +32,7 @@
 		53DD04B81F040AFD00125110 /* WordsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B71F040AFD00125110 /* WordsLoader.swift */; };
 		53DD04BB1F0414C700125110 /* WordTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B91F0414C700125110 /* WordTableHeader.swift */; };
 		53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04BA1F0414C700125110 /* WordTableHeader.xib */; };
+		9F3107611F06B7AD003CC082 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F3107601F06B7AD003CC082 /* Words.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,7 +79,6 @@
 
 /* Begin PBXFileReference section */
 		53144CA41F05667400E32E99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		53144CA81F05751300E32E99 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Words.txt; path = ../../../../Desktop/Vocapp/Words.txt; sourceTree = "<group>"; };
 		53DD04611F02B17500125110 /* Vocapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vocapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DD04641F02B17500125110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DD04661F02B17500125110 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +108,7 @@
 		53DD04B71F040AFD00125110 /* WordsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsLoader.swift; sourceTree = "<group>"; };
 		53DD04B91F0414C700125110 /* WordTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordTableHeader.swift; sourceTree = "<group>"; };
 		53DD04BA1F0414C700125110 /* WordTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordTableHeader.xib; sourceTree = "<group>"; };
+		9F3107601F06B7AD003CC082 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +162,8 @@
 				53DD04701F02B17500125110 /* Info.plist */,
 				53DD049F1F02BCF100125110 /* NotificationsManager.swift */,
 				53DD04B71F040AFD00125110 /* WordsLoader.swift */,
+				9F3107601F06B7AD003CC082 /* Words.txt */,
 				53144CA41F05667400E32E99 /* Images.xcassets */,
-				53144CA81F05751300E32E99 /* Words.txt */,
 			);
 			path = Vocapp;
 			sourceTree = "<group>";
@@ -336,7 +336,7 @@
 				53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */,
 				53DD046C1F02B17500125110 /* Assets.xcassets in Resources */,
 				53DD046A1F02B17500125110 /* Main.storyboard in Resources */,
-				53144CA91F05751300E32E99 /* Words.txt in Resources */,
+				9F3107611F06B7AD003CC082 /* Words.txt in Resources */,
 				53DD04AE1F02C48700125110 /* SettingsVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
