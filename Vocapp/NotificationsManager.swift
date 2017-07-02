@@ -46,4 +46,17 @@ class NotificationsManager: NSObject {
             offset += 60
         }
     }
+
+    private func setScheduledNotifications(_ first: Date, last: Date) {
+        let words = WordsLoader.shared.loadWords()
+        var offset: TimeInterval = first.timeIntervalSinceNow
+        let dayLength: TimeInterval = 24 * 60 * 60
+        for dayWords in words {
+            for word in dayWords {
+                offset += 5
+                setNotificationAfter(interval: offset, title: word.text, body: word.translation)
+            }
+            offset += dayLength
+        }
+    }
 }
