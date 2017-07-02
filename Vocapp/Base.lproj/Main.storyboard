@@ -20,10 +20,85 @@
                     <view key="view" contentMode="scaleToFill" id="ezd-ib-AG8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выставьте период получения уведомлений фвфывфыв" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-q3-FI9">
+                                <rect key="frame" x="20" y="100" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="☝️From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A08-m8-OhK">
+                                <rect key="frame" x="20" y="166" width="70.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8fH-0i-qbI">
+                                <rect key="frame" x="0.0" y="198" width="375" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="guh-9b-Ygu"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="86v-NV-eoN">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="maa-Be-Z4g" id="PXE-xd-JIR"/>
+                                    <outlet property="delegate" destination="maa-Be-Z4g" id="jvD-b7-ugq"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😴 To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-jU-gkf">
+                                <rect key="frame" x="20" y="348" width="52" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lLu-lH-75A">
+                                <rect key="frame" x="0.0" y="380" width="375" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="TiZ-Wq-7xZ"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dFA-t5-2Pz">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="maa-Be-Z4g" id="s2q-W9-Zxa"/>
+                                    <outlet property="delegate" destination="maa-Be-Z4g" id="5mb-wX-r3z"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lLu-lH-75A" firstAttribute="top" secondItem="Kac-jU-gkf" secondAttribute="bottom" constant="8" id="07O-zU-r14"/>
+                            <constraint firstItem="Kac-jU-gkf" firstAttribute="top" secondItem="8fH-0i-qbI" secondAttribute="bottom" constant="50" id="2GB-g6-qXC"/>
+                            <constraint firstItem="Kac-jU-gkf" firstAttribute="leading" secondItem="ezd-ib-AG8" secondAttribute="leading" constant="20" id="8jS-CB-LQx"/>
+                            <constraint firstItem="hwv-q3-FI9" firstAttribute="leading" secondItem="ezd-ib-AG8" secondAttribute="leading" constant="20" id="QZD-a7-zrI"/>
+                            <constraint firstItem="A08-m8-OhK" firstAttribute="top" secondItem="hwv-q3-FI9" secondAttribute="bottom" constant="45" id="akQ-zM-u78"/>
+                            <constraint firstItem="lLu-lH-75A" firstAttribute="leading" secondItem="ezd-ib-AG8" secondAttribute="leading" id="fN5-97-C38"/>
+                            <constraint firstItem="hwv-q3-FI9" firstAttribute="top" secondItem="7Gm-Oe-C4n" secondAttribute="bottom" constant="80" id="fjP-vs-ceC"/>
+                            <constraint firstAttribute="trailing" secondItem="lLu-lH-75A" secondAttribute="trailing" id="gch-5W-dIt"/>
+                            <constraint firstItem="A08-m8-OhK" firstAttribute="leading" secondItem="ezd-ib-AG8" secondAttribute="leading" constant="20" id="jmv-nM-u47"/>
+                            <constraint firstItem="8fH-0i-qbI" firstAttribute="top" secondItem="A08-m8-OhK" secondAttribute="bottom" constant="8" id="ndd-Tj-Q7l"/>
+                            <constraint firstAttribute="trailing" secondItem="8fH-0i-qbI" secondAttribute="trailing" id="qBT-MG-7ST"/>
+                            <constraint firstAttribute="trailing" secondItem="hwv-q3-FI9" secondAttribute="trailing" constant="20" id="uE8-Zp-QQn"/>
+                            <constraint firstItem="8fH-0i-qbI" firstAttribute="leading" secondItem="ezd-ib-AG8" secondAttribute="leading" id="zc2-hQ-Vva"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settingsTabIcon" id="rHW-7F-D0J"/>
+                    <connections>
+                        <outlet property="fromCollectionView" destination="8fH-0i-qbI" id="odf-6D-OwI"/>
+                        <outlet property="toCollectionView" destination="lLu-lH-75A" id="8rm-Yw-1nx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m2x-RZ-d2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

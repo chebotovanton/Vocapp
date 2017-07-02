@@ -8,28 +8,65 @@
 
 import UIKit
 
-class SettingsVC: UIViewController {
+private let reuseIdentifier = "Cell"
+
+class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+
+    @IBOutlet weak var fromCollectionView: UICollectionView!
+    @IBOutlet weak var toCollectionView: UICollectionView!
+
+    let fromHours: [HourObject] = [HourObject(9), HourObject(10), HourObject(11), HourObject(12)]
+    let toHours: [HourObject] = [HourObject(21), HourObject(22), HourObject(23)]
+
+
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let nib = UINib(nibName: "HourCell", bundle: nil)
+        fromCollectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+        toCollectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier)
+
+        fromCollectionView.collectionViewLayout = layout()
+        toCollectionView.collectionViewLayout = layout()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    private func layout() -> UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: 100, height: 100)
+        layout.scrollDirection = .horizontal
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        return layout
     }
-    */
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == fromCollectionView {
+            return fromHours.count
+        } else {
+            return toHours.count
+        }
+
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HourCell
+
+        let hour: HourObject
+        if collectionView == fromCollectionView {
+            hour = fromHours[indexPath.item]
+        } else {
+            hour = toHours[indexPath.item]
+        }
+
+        cell.setup(hour)
+
+        return cell
+    }
+
 
 }
