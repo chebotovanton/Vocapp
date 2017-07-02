@@ -14,15 +14,18 @@ private let headerIdentifier = "Header"
 class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    var calculationCell: WordExampleCell!
 
     var sections: [Section] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        calculationCell = loadCalculationCell()
+
         collectionView.alwaysBounceVertical = true
 
-        sections = createFakeSections()
+        sections = createSections()
         collectionView.register(UINib(nibName: "WordExampleCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.register(UINib(nibName: "WordTableHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
 
@@ -31,7 +34,12 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         collectionView?.collectionViewLayout = layout
     }
 
-    func createFakeSections() -> [Section] {
+    func loadCalculationCell() -> WordExampleCell {
+        let nibViews = Bundle.main.loadNibNamed("WordExampleCell", owner: nil, options: nil)
+        return nibViews![0] as! WordExampleCell
+    }
+
+    func createSections() -> [Section] {
         let words = WordsLoader.shared.loadWords()
         var result: [Section] = []
         for i in 0..<words.count {
@@ -68,7 +76,14 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: 50)
+        let example = sections[indexPath.section].examples[indexPath.item]
+        calculationCell.setup(example)
+        let targetSize = CGSize(width: collectionView.frame.width, height: 1000)
+        let size = calculationCell.contentView.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: UILayoutPriorityRequired, verticalFittingPriority: UILayoutPriorityFittingSizeLevel)
+
+        return size
+//        let result = CGSize(width: collectionView.frame.width, height: size.height)
+//        return result
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
