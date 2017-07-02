@@ -22,7 +22,6 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         super.viewDidLoad()
 
         calculationCell = loadCalculationCell()
-
         collectionView.alwaysBounceVertical = true
 
         sections = createSections()
@@ -82,8 +81,6 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         let size = calculationCell.contentView.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: UILayoutPriorityRequired, verticalFittingPriority: UILayoutPriorityFittingSizeLevel)
 
         return size
-//        let result = CGSize(width: collectionView.frame.width, height: size.height)
-//        return result
     }
 
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
