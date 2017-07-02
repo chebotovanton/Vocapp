@@ -44,7 +44,7 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         var result: [Section] = []
         for i in 0..<words.count {
             let dayWords = words[i]
-            let title = "day" + String(i)
+            let title = "DAY " + String(i + 1)
             let section = Section(title: title, examples: dayWords)
             result.append(section)
         }
