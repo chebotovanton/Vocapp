@@ -36,20 +36,24 @@ class NotificationsManager: NSObject {
     }
 
     private func setScheduledNotifications() {
-        let words = WordsLoader.shared.loadWords()
-        var offset: TimeInterval = 0
-        for dayWords in words {
-            for word in dayWords {
-                offset += 5
-                setNotificationAfter(interval: offset, title: word.text, body: word.translation)
-            }
-            offset += 60
-        }
+        //WARNING: Load from userDefaults
+        let first = HourObject(10)
+        let last = HourObject(22)
+        setScheduledNotifications(first, last: last)
     }
 
-    private func setScheduledNotifications(_ first: Date, last: Date) {
+    func setScheduledNotifications(_ first: HourObject, last: HourObject) {
         let words = WordsLoader.shared.loadWords()
-        var offset: TimeInterval = first.timeIntervalSinceNow
+        let calendar = Calendar.current
+        let now = Date()
+        let comps: Set <Calendar.Component> = [.year, .month, .day, .hour, .minute, .second, .timeZone]
+        
+        var nowComponents = calendar.dateComponents(comps, from: now)
+        nowComponents.day = nowComponents.day! + 1
+        nowComponents.hour = first.value
+        nowComponents.minute = 0
+        let firstDate = calendar.date(from: nowComponents)
+        var offset: TimeInterval = firstDate!.timeIntervalSinceNow
         let dayLength: TimeInterval = 24 * 60 * 60
         for dayWords in words {
             for word in dayWords {

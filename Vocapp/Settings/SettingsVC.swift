@@ -11,6 +11,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
 
     @IBOutlet weak var fromCollectionView: UICollectionView!
     @IBOutlet weak var toCollectionView: UICollectionView!
@@ -91,6 +92,14 @@ class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+        let hour: HourObject
+        if collectionView == fromCollectionView {
+            hour = fromHours[indexPath.item]
+        } else {
+            hour = toHours[indexPath.item]
+        }
+
+
     }
 
 }
