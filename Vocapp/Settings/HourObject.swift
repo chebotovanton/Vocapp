@@ -8,13 +8,22 @@
 
 import UIKit
 
-class HourObject: NSObject {
+class HourObject: NSObject, NSCoding {
 
-//    let text: String
+    private static let kValueDefaultsKey = "kValueDefaultsKey"
+
     let value: Int
 
     init(_ value: Int) {
         self.value = value
+    }
+
+    public func encode(with aCoder: NSCoder) {
+        aCoder.encode(value, forKey: HourObject.kValueDefaultsKey)
+    }
+
+    public required init?(coder aDecoder: NSCoder) {
+        self.value = Int(aDecoder.decodeInteger(forKey: HourObject.kValueDefaultsKey))
     }
 
 }

@@ -14,16 +14,20 @@ class DefaultsManager: NSObject {
     private static let kLastHourKey = "kLastHourKey"
 
     static func saveFirstHour(_ hour: HourObject) {
-        UserDefaults.standard.set(hour, forKey: kFirstHourKey)
+        let data = NSKeyedArchiver.archivedData(withRootObject: hour)
+        UserDefaults.standard.set(data, forKey: kFirstHourKey)
     }
 
     static func saveLastHour(_ hour: HourObject) {
-        UserDefaults.standard.set(hour, forKey: kLastHourKey)
+        let data = NSKeyedArchiver.archivedData(withRootObject: hour)
+        UserDefaults.standard.set(data, forKey: kLastHourKey)
     }
 
     static func firstHour() -> HourObject {
-        if let hour = UserDefaults.standard.object(forKey: kFirstHourKey) as? HourObject {
-            return hour
+        if let data = UserDefaults.standard.data(forKey: kFirstHourKey) {
+            if let hour = NSKeyedUnarchiver.unarchiveObject(with: data) as? HourObject {
+                return hour
+            }
         }
         let defaultHour = HourObject(11)
         saveFirstHour(defaultHour)
@@ -31,9 +35,12 @@ class DefaultsManager: NSObject {
     }
 
     static func lastHour() -> HourObject {
-        if let hour = UserDefaults.standard.object(forKey: kLastHourKey) as? HourObject {
-            return hour
+        if let data = UserDefaults.standard.data(forKey: kLastHourKey) {
+            if let hour = NSKeyedUnarchiver.unarchiveObject(with: data) as? HourObject {
+                return hour
+            }
         }
+
         let defaultHour = HourObject(20)
         saveLastHour(defaultHour)
         return defaultHour

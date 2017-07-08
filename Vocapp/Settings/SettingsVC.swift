@@ -92,14 +92,18 @@ class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-        let hour: HourObject
+
+        var firstHour = DefaultsManager.firstHour()
+        var lastHour = DefaultsManager.lastHour()
+
         if collectionView == fromCollectionView {
-            hour = fromHours[indexPath.item]
+            firstHour = fromHours[indexPath.item]
+            DefaultsManager.saveFirstHour(firstHour)
         } else {
-            hour = toHours[indexPath.item]
+            lastHour = toHours[indexPath.item]
+            DefaultsManager.saveLastHour(lastHour)
         }
-
-
+        NotificationsManager.shared.setScheduledNotifications(firstHour, last: lastHour)
     }
 
 }
