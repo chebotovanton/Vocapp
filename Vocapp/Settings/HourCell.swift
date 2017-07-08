@@ -15,6 +15,8 @@ class HourCell: UICollectionViewCell {
     func setup(_ hour: HourObject) {
         label.text = String(hour.value)
         label.alpha = 0.2
+
+//        isSelected = (hour.value == DefaultsManager.firstHour().value || hour.value == DefaultsManager.lastHour().value)
     }
 
     override var isSelected: Bool {

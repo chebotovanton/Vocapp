@@ -26,4 +26,8 @@ class HourObject: NSObject, NSCoding {
         self.value = Int(aDecoder.decodeInteger(forKey: HourObject.kValueDefaultsKey))
     }
 
+    public static func ==(lhs: HourObject, rhs: HourObject) -> Bool {
+        return lhs.value == rhs.value
+    }
+
 }

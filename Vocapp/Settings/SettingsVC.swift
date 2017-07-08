@@ -34,6 +34,14 @@ class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         toCollectionView.collectionViewLayout = layout()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        //WARNING: What's the item?
+        fromCollectionView.selectItem(at: IndexPath(item: 2, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+        toCollectionView.selectItem(at: IndexPath(item: 2, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+    }
+
     func loadCalculationCell() -> HourCell {
         let nibViews = Bundle.main.loadNibNamed("HourCell", owner: nil, options: nil)
         return nibViews![0] as! HourCell
@@ -77,14 +85,12 @@ class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! HourCell
-
         let hour: HourObject
         if collectionView == fromCollectionView {
             hour = fromHours[indexPath.item]
         } else {
             hour = toHours[indexPath.item]
         }
-
         cell.setup(hour)
 
         return cell
