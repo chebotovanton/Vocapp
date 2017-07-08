@@ -34,6 +34,7 @@
 		9F9B6CDB1F0919FC0089D655 /* HourObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDA1F0919FC0089D655 /* HourObject.swift */; };
 		9F9B6CDE1F091B500089D655 /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDC1F091B500089D655 /* HourCell.swift */; };
 		9F9B6CDF1F091B500089D655 /* HourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDD1F091B500089D655 /* HourCell.xib */; };
+		9FC3F9A71F10E00B000E72C0 /* DefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC3F9A61F10E00B000E72C0 /* DefaultsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		9F9B6CDA1F0919FC0089D655 /* HourObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourObject.swift; sourceTree = "<group>"; };
 		9F9B6CDC1F091B500089D655 /* HourCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
 		9F9B6CDD1F091B500089D655 /* HourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HourCell.xib; sourceTree = "<group>"; };
+		9FC3F9A61F10E00B000E72C0 /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				53DD046B1F02B17500125110 /* Assets.xcassets */,
 				53DD046D1F02B17500125110 /* LaunchScreen.storyboard */,
 				53DD04701F02B17500125110 /* Info.plist */,
+				9FC3F9A61F10E00B000E72C0 /* DefaultsManager.swift */,
 				53DD049F1F02BCF100125110 /* NotificationsManager.swift */,
 				53DD04B71F040AFD00125110 /* WordsLoader.swift */,
 				9F3107601F06B7AD003CC082 /* Words.txt */,
@@ -375,6 +378,7 @@
 				9F9B6CDB1F0919FC0089D655 /* HourObject.swift in Sources */,
 				53DD04B01F02C77300125110 /* Section.swift in Sources */,
 				53DD04B21F02C78F00125110 /* WordExample.swift in Sources */,
+				9FC3F9A71F10E00B000E72C0 /* DefaultsManager.swift in Sources */,
 				53DD04BB1F0414C700125110 /* WordTableHeader.swift in Sources */,
 				53DD04A01F02BCF100125110 /* NotificationsManager.swift in Sources */,
 				53DD04AD1F02C48700125110 /* SettingsVC.swift in Sources */,
