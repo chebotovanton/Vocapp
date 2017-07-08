@@ -38,8 +38,13 @@ class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         super.viewWillAppear(animated)
 
         //WARNING: What's the item?
-        fromCollectionView.selectItem(at: IndexPath(item: 2, section: 0), animated: false, scrollPosition: .centeredHorizontally)
-        toCollectionView.selectItem(at: IndexPath(item: 2, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+
+        if let firstIndex = fromHours.index(of: DefaultsManager.firstHour()) {
+            fromCollectionView.selectItem(at: IndexPath(item: firstIndex, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+        }
+        if let lastIndex = toHours.index(of: DefaultsManager.lastHour()) {
+            toCollectionView.selectItem(at: IndexPath(item: lastIndex, section: 0), animated: false, scrollPosition: .centeredHorizontally)
+        }
     }
 
     func loadCalculationCell() -> HourCell {
