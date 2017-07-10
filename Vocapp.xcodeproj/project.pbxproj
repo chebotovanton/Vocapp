@@ -30,6 +30,7 @@
 		53DD04B81F040AFD00125110 /* WordsLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B71F040AFD00125110 /* WordsLoader.swift */; };
 		53DD04BB1F0414C700125110 /* WordTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B91F0414C700125110 /* WordTableHeader.swift */; };
 		53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04BA1F0414C700125110 /* WordTableHeader.xib */; };
+		8E2FF1299C9E752640FBAA08 /* Pods_Vocapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24748751811870106BD454BD /* Pods_Vocapp.framework */; };
 		9F3107611F06B7AD003CC082 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F3107601F06B7AD003CC082 /* Words.txt */; };
 		9F9B6CDB1F0919FC0089D655 /* HourObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDA1F0919FC0089D655 /* HourObject.swift */; };
 		9F9B6CDE1F091B500089D655 /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDC1F091B500089D655 /* HourCell.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		24748751811870106BD454BD /* Pods_Vocapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vocapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		53144CA41F05667400E32E99 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		53DD04611F02B17500125110 /* Vocapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vocapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DD04641F02B17500125110 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,18 +110,28 @@
 		53DD04B71F040AFD00125110 /* WordsLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsLoader.swift; sourceTree = "<group>"; };
 		53DD04B91F0414C700125110 /* WordTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordTableHeader.swift; sourceTree = "<group>"; };
 		53DD04BA1F0414C700125110 /* WordTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordTableHeader.xib; sourceTree = "<group>"; };
+		7B1748702A16AC2313370516 /* Pods-Vocapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vocapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vocapp/Pods-Vocapp.debug.xcconfig"; sourceTree = "<group>"; };
 		9F3107601F06B7AD003CC082 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
 		9F9B6CDA1F0919FC0089D655 /* HourObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourObject.swift; sourceTree = "<group>"; };
 		9F9B6CDC1F091B500089D655 /* HourCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
 		9F9B6CDD1F091B500089D655 /* HourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HourCell.xib; sourceTree = "<group>"; };
 		9FC3F9A61F10E00B000E72C0 /* DefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultsManager.swift; sourceTree = "<group>"; };
+		E854E6387BD67A9F3FA47F47 /* Pods-Vocapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vocapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vocapp/Pods-Vocapp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0DFF3FE7147DB8E4CF60F2F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		53DD045E1F02B17500125110 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E2FF1299C9E752640FBAA08 /* Pods_Vocapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,6 +145,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		255B95752887F979E8F4ED17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B1748702A16AC2313370516 /* Pods-Vocapp.debug.xcconfig */,
+				E854E6387BD67A9F3FA47F47 /* Pods-Vocapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		39C255AE0FC32C722BA54BA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				24748751811870106BD454BD /* Pods_Vocapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		53DD04581F02B17500125110 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +169,8 @@
 				53DD04771F02B17500125110 /* Vocapp WatchKit App */,
 				53DD04861F02B17500125110 /* Vocapp WatchKit Extension */,
 				53DD04621F02B17500125110 /* Products */,
+				255B95752887F979E8F4ED17 /* Pods */,
+				39C255AE0FC32C722BA54BA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -235,10 +266,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53DD049C1F02B17500125110 /* Build configuration list for PBXNativeTarget "Vocapp" */;
 			buildPhases = (
+				AFFBE23AE5D6FBCBF3DBBCAB /* [CP] Check Pods Manifest.lock */,
 				53DD045D1F02B17500125110 /* Sources */,
 				53DD045E1F02B17500125110 /* Frameworks */,
 				53DD045F1F02B17500125110 /* Resources */,
 				53DD049B1F02B17500125110 /* Embed Watch Content */,
+				9BF334A5A474BE744CA3E98D /* [CP] Embed Pods Frameworks */,
+				0399C393FE8943657771998E /* [CP] Copy Pods Resources */,
+				9FC3F9A81F1395D4000E72C0 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -256,6 +291,7 @@
 			buildPhases = (
 				53DD04711F02B17500125110 /* Resources */,
 				53DD04971F02B17500125110 /* Embed App Extensions */,
+				0DFF3FE7147DB8E4CF60F2F0 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -365,6 +401,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0399C393FE8943657771998E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vocapp/Pods-Vocapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9BF334A5A474BE744CA3E98D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vocapp/Pods-Vocapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FC3F9A81F1395D4000E72C0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 0faa7860380f4b43a00883bab73fb358c65a80af 5c85eb94e00b08c3bef33ff5d2c694ef7a95348ef3f7f88cf780de85f0d4321f";
+		};
+		AFFBE23AE5D6FBCBF3DBBCAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53DD045D1F02B17500125110 /* Sources */ = {
@@ -604,6 +701,7 @@
 		};
 		53DD049D1F02B17500125110 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B1748702A16AC2313370516 /* Pods-Vocapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 64AA6VGY67;
@@ -617,6 +715,7 @@
 		};
 		53DD049E1F02B17500125110 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E854E6387BD67A9F3FA47F47 /* Pods-Vocapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 64AA6VGY67;
