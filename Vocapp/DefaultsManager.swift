@@ -64,7 +64,7 @@ class DefaultsManager: NSObject {
             let timeInterval = Date().timeIntervalSince(firstLaunchDate)
             let dayLength: TimeInterval = 24 * 60 * 60
 
-            return Int(timeInterval / dayLength) + 1
+            return Int(timeInterval / dayLength)
         }
 
         return 0
