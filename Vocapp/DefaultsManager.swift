@@ -12,6 +12,7 @@ class DefaultsManager: NSObject {
 
     private static let kFirstHourKey = "kFirstHourKey"
     private static let kLastHourKey = "kLastHourKey"
+    private static let kFirstLaunchDateKey = "kFirstLaunchDateKey"
 
     static func saveFirstHour(_ hour: HourObject) {
         let data = NSKeyedArchiver.archivedData(withRootObject: hour)
@@ -44,5 +45,28 @@ class DefaultsManager: NSObject {
         let defaultHour = HourObject(20)
         saveLastHour(defaultHour)
         return defaultHour
+    }
+
+    static func isFirstLaunch() -> Bool {
+        if UserDefaults.standard.data(forKey: kFirstLaunchDateKey) != nil {
+            return false
+        }
+        let date = Date()
+        let data = NSKeyedArchiver.archivedData(withRootObject: date)
+        UserDefaults.standard.set(data, forKey: kFirstLaunchDateKey)
+
+        return true
+    }
+
+    static func daysSinceFirstStart() -> Int {
+        if let data = UserDefaults.standard.data(forKey: kFirstLaunchDateKey) {
+            let firstLaunchDate = NSKeyedUnarchiver.unarchiveObject(with: data) as! Date
+            let timeInterval = Date().timeIntervalSince(firstLaunchDate)
+            let dayLength: TimeInterval = 24 * 60 * 60
+
+            return Int(timeInterval / dayLength) + 1
+        }
+
+        return 0
     }
 }

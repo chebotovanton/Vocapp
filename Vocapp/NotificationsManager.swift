@@ -16,7 +16,9 @@ class NotificationsManager: NSObject {
     func authorize() {
         UNUserNotificationCenter.current().requestAuthorization(options: .alert) { (success, error) in
             DispatchQueue.main.async {
-                self.setScheduledNotifications()
+                if DefaultsManager.isFirstLaunch() {
+                    self.setScheduledNotifications()
+                }
             }
         }
     }
