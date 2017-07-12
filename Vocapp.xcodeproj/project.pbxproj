@@ -711,6 +711,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T36ZW3D2PD;
 				INFOPLIST_FILE = Vocapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vocapp.vocapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -728,6 +729,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = T36ZW3D2PD;
 				INFOPLIST_FILE = Vocapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vocapp.vocapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
