@@ -14,7 +14,7 @@ class NotificationsManager: NSObject {
     static let shared = NotificationsManager()
 
     func authorize() {
-        UNUserNotificationCenter.current().requestAuthorization(options: .alert) { (success, error) in
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (success, error) in
             DispatchQueue.main.async {
                 if DefaultsManager.isFirstLaunch() {
                     self.setScheduledNotifications()
@@ -27,6 +27,7 @@ class NotificationsManager: NSObject {
         let content = UNMutableNotificationContent()
         content.title = title
         content.body = body
+        content.sound = UNNotificationSound(named: "notification.wav")
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
         let request = UNNotificationRequest(identifier: title+body, content: content, trigger: trigger)

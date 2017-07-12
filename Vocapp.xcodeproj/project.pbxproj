@@ -32,6 +32,7 @@
 		53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04BA1F0414C700125110 /* WordTableHeader.xib */; };
 		8E2FF1299C9E752640FBAA08 /* Pods_Vocapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24748751811870106BD454BD /* Pods_Vocapp.framework */; };
 		9F3107611F06B7AD003CC082 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F3107601F06B7AD003CC082 /* Words.txt */; };
+		9F9072AE1F16498C004AF3A4 /* notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9F9072AD1F16498C004AF3A4 /* notification.wav */; };
 		9F9B6CDB1F0919FC0089D655 /* HourObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDA1F0919FC0089D655 /* HourObject.swift */; };
 		9F9B6CDE1F091B500089D655 /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDC1F091B500089D655 /* HourCell.swift */; };
 		9F9B6CDF1F091B500089D655 /* HourCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDD1F091B500089D655 /* HourCell.xib */; };
@@ -112,6 +113,7 @@
 		53DD04BA1F0414C700125110 /* WordTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordTableHeader.xib; sourceTree = "<group>"; };
 		7B1748702A16AC2313370516 /* Pods-Vocapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vocapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vocapp/Pods-Vocapp.debug.xcconfig"; sourceTree = "<group>"; };
 		9F3107601F06B7AD003CC082 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
+		9F9072AD1F16498C004AF3A4 /* notification.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notification.wav; sourceTree = "<group>"; };
 		9F9B6CDA1F0919FC0089D655 /* HourObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourObject.swift; sourceTree = "<group>"; };
 		9F9B6CDC1F091B500089D655 /* HourCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
 		9F9B6CDD1F091B500089D655 /* HourCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HourCell.xib; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				53DD04B71F040AFD00125110 /* WordsLoader.swift */,
 				9F3107601F06B7AD003CC082 /* Words.txt */,
 				53144CA41F05667400E32E99 /* Images.xcassets */,
+				9F9072AD1F16498C004AF3A4 /* notification.wav */,
 			);
 			path = Vocapp;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				53DD046F1F02B17500125110 /* LaunchScreen.storyboard in Resources */,
 				53DD04B61F02C90300125110 /* WordExampleCell.xib in Resources */,
 				53144CA51F05667400E32E99 /* Images.xcassets in Resources */,
+				9F9072AE1F16498C004AF3A4 /* notification.wav in Resources */,
 				9F9B6CDF1F091B500089D655 /* HourCell.xib in Resources */,
 				53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */,
 				53DD046C1F02B17500125110 /* Assets.xcassets in Resources */,
