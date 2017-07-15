@@ -21,7 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выставьте период получения уведомлений фвфывфыв" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-q3-FI9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="34l-YO-r0W">
+                                <rect key="frame" x="-35" y="0.0" width="445" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="63w-fj-PEY"/>
+                                    <constraint firstAttribute="width" constant="445" id="KVf-kv-fT1"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выставьте период получения уведомлений" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hwv-q3-FI9">
                                 <rect key="frame" x="20" y="100" width="335" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -87,11 +94,13 @@
                             <constraint firstItem="lLu-lH-75A" firstAttribute="leading" secondItem="ezd-ib-AG8" secondAttribute="leading" id="fN5-97-C38"/>
                             <constraint firstItem="hwv-q3-FI9" firstAttribute="top" secondItem="7Gm-Oe-C4n" secondAttribute="bottom" constant="80" id="fjP-vs-ceC"/>
                             <constraint firstAttribute="trailing" secondItem="lLu-lH-75A" secondAttribute="trailing" id="gch-5W-dIt"/>
+                            <constraint firstItem="34l-YO-r0W" firstAttribute="centerY" secondItem="ezd-ib-AG8" secondAttribute="centerY" id="izc-8J-kUd"/>
                             <constraint firstItem="A08-m8-OhK" firstAttribute="leading" secondItem="ezd-ib-AG8" secondAttribute="leading" constant="20" id="jmv-nM-u47"/>
                             <constraint firstItem="8fH-0i-qbI" firstAttribute="top" secondItem="A08-m8-OhK" secondAttribute="bottom" constant="8" id="ndd-Tj-Q7l"/>
                             <constraint firstAttribute="trailing" secondItem="8fH-0i-qbI" secondAttribute="trailing" id="qBT-MG-7ST"/>
                             <constraint firstAttribute="trailing" secondItem="hwv-q3-FI9" secondAttribute="trailing" constant="20" id="uE8-Zp-QQn"/>
                             <constraint firstItem="8fH-0i-qbI" firstAttribute="leading" secondItem="ezd-ib-AG8" secondAttribute="leading" id="zc2-hQ-Vva"/>
+                            <constraint firstItem="34l-YO-r0W" firstAttribute="centerX" secondItem="ezd-ib-AG8" secondAttribute="centerX" id="zxy-X2-stk"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="settingsTabIcon" id="rHW-7F-D0J"/>
@@ -135,6 +144,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="CGa-6O-BEb">
+                                <rect key="frame" x="-35" y="0.0" width="445" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="FAT-oo-14P"/>
+                                    <constraint firstAttribute="width" constant="445" id="YPD-oW-pjG"/>
+                                </constraints>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qbs-TL-uYz">
                                 <rect key="frame" x="8" y="20" width="359" height="598"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -150,12 +166,13 @@
                                 </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qbs-TL-uYz" firstAttribute="top" secondItem="ou4-zc-kKv" secondAttribute="bottom" id="3hn-bh-LDx"/>
                             <constraint firstItem="Qbs-TL-uYz" firstAttribute="leading" secondItem="9r7-9e-VJ5" secondAttribute="leading" constant="8" id="82m-7n-d0y"/>
                             <constraint firstAttribute="trailing" secondItem="Qbs-TL-uYz" secondAttribute="trailing" constant="8" id="Vxh-hZ-lmY"/>
+                            <constraint firstItem="CGa-6O-BEb" firstAttribute="centerY" secondItem="9r7-9e-VJ5" secondAttribute="centerY" id="X1v-Aw-XG0"/>
                             <constraint firstItem="QsK-l9-Xuq" firstAttribute="top" secondItem="Qbs-TL-uYz" secondAttribute="bottom" id="ae0-5s-qcO"/>
+                            <constraint firstItem="CGa-6O-BEb" firstAttribute="centerX" secondItem="9r7-9e-VJ5" secondAttribute="centerX" id="ph6-j6-g0g"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="wordsTabIcon" id="udW-jl-Sc5"/>
@@ -169,6 +186,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="background" width="890" height="1334"/>
         <image name="settingsTabIcon" width="24" height="24"/>
         <image name="wordsTabIcon" width="24" height="24"/>
     </resources>
