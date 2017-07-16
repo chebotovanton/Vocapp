@@ -16,7 +16,7 @@
 		53DD047A1F02B17500125110 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04781F02B17500125110 /* Interface.storyboard */; };
 		53DD047C1F02B17500125110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DD047B1F02B17500125110 /* Assets.xcassets */; };
 		53DD04831F02B17500125110 /* Vocapp WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 53DD04821F02B17500125110 /* Vocapp WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		53DD048A1F02B17500125110 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04891F02B17500125110 /* InterfaceController.swift */; };
+		53DD048A1F02B17500125110 /* WordsIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04891F02B17500125110 /* WordsIC.swift */; };
 		53DD048C1F02B17500125110 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD048B1F02B17500125110 /* ExtensionDelegate.swift */; };
 		53DD048E1F02B17500125110 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD048D1F02B17500125110 /* NotificationController.swift */; };
 		53DD04901F02B17500125110 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DD048F1F02B17500125110 /* Assets.xcassets */; };
@@ -32,6 +32,9 @@
 		53DD04BC1F0414C700125110 /* WordTableHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 53DD04BA1F0414C700125110 /* WordTableHeader.xib */; };
 		8E2FF1299C9E752640FBAA08 /* Pods_Vocapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24748751811870106BD454BD /* Pods_Vocapp.framework */; };
 		9F3107611F06B7AD003CC082 /* Words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9F3107601F06B7AD003CC082 /* Words.txt */; };
+		9F4A9A681F1A461B004FCC5A /* kirov_reporting.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9F4A9A671F1A461B004FCC5A /* kirov_reporting.mp3 */; };
+		9F4A9A6A1F1A5A8D004FCC5A /* WordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A9A691F1A5A8D004FCC5A /* WordRow.swift */; };
+		9F4A9A6B1F1A5B0C004FCC5A /* WordExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DD04B11F02C78F00125110 /* WordExample.swift */; };
 		9F9072AE1F16498C004AF3A4 /* notification.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9F9072AD1F16498C004AF3A4 /* notification.wav */; };
 		9F9B6CDB1F0919FC0089D655 /* HourObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDA1F0919FC0089D655 /* HourObject.swift */; };
 		9F9B6CDE1F091B500089D655 /* HourCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9B6CDC1F091B500089D655 /* HourCell.swift */; };
@@ -96,7 +99,7 @@
 		53DD047D1F02B17500125110 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53DD04821F02B17500125110 /* Vocapp WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Vocapp WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DD04881F02B17500125110 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		53DD04891F02B17500125110 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		53DD04891F02B17500125110 /* WordsIC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsIC.swift; sourceTree = "<group>"; };
 		53DD048B1F02B17500125110 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		53DD048D1F02B17500125110 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		53DD048F1F02B17500125110 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -113,6 +116,8 @@
 		53DD04BA1F0414C700125110 /* WordTableHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordTableHeader.xib; sourceTree = "<group>"; };
 		7B1748702A16AC2313370516 /* Pods-Vocapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vocapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vocapp/Pods-Vocapp.debug.xcconfig"; sourceTree = "<group>"; };
 		9F3107601F06B7AD003CC082 /* Words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Words.txt; sourceTree = "<group>"; };
+		9F4A9A671F1A461B004FCC5A /* kirov_reporting.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = kirov_reporting.mp3; path = ../../../../Desktop/kirov_reporting.mp3; sourceTree = "<group>"; };
+		9F4A9A691F1A5A8D004FCC5A /* WordRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordRow.swift; sourceTree = "<group>"; };
 		9F9072AD1F16498C004AF3A4 /* notification.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = notification.wav; sourceTree = "<group>"; };
 		9F9B6CDA1F0919FC0089D655 /* HourObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourObject.swift; sourceTree = "<group>"; };
 		9F9B6CDC1F091B500089D655 /* HourCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HourCell.swift; sourceTree = "<group>"; };
@@ -202,6 +207,7 @@
 				9F3107601F06B7AD003CC082 /* Words.txt */,
 				53144CA41F05667400E32E99 /* Images.xcassets */,
 				9F9072AD1F16498C004AF3A4 /* notification.wav */,
+				9F4A9A671F1A461B004FCC5A /* kirov_reporting.mp3 */,
 			);
 			path = Vocapp;
 			sourceTree = "<group>";
@@ -219,7 +225,8 @@
 		53DD04861F02B17500125110 /* Vocapp WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				53DD04891F02B17500125110 /* InterfaceController.swift */,
+				9F4A9A691F1A5A8D004FCC5A /* WordRow.swift */,
+				53DD04891F02B17500125110 /* WordsIC.swift */,
 				53DD048B1F02B17500125110 /* ExtensionDelegate.swift */,
 				53DD048D1F02B17500125110 /* NotificationController.swift */,
 				53DD048F1F02B17500125110 /* Assets.xcassets */,
@@ -384,6 +391,7 @@
 				53DD046C1F02B17500125110 /* Assets.xcassets in Resources */,
 				53DD046A1F02B17500125110 /* Main.storyboard in Resources */,
 				9F3107611F06B7AD003CC082 /* Words.txt in Resources */,
+				9F4A9A681F1A461B004FCC5A /* kirov_reporting.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,9 +499,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F4A9A6A1F1A5A8D004FCC5A /* WordRow.swift in Sources */,
 				53DD048E1F02B17500125110 /* NotificationController.swift in Sources */,
 				53DD048C1F02B17500125110 /* ExtensionDelegate.swift in Sources */,
-				53DD048A1F02B17500125110 /* InterfaceController.swift in Sources */,
+				53DD048A1F02B17500125110 /* WordsIC.swift in Sources */,
+				9F4A9A6B1F1A5B0C004FCC5A /* WordExample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -24,10 +24,18 @@ class NotificationsManager: NSObject {
     }
 
     func setNotificationAfter(interval: TimeInterval, title: String, body:String) {
+        setNotificationAfter(interval: interval, title: title, subtitle: "", body: body)
+    }
+
+    func setNotificationAfter(interval: TimeInterval, title: String, subtitle: String, body:String) {
         let content = UNMutableNotificationContent()
         content.title = title
+        content.subtitle = subtitle
         content.body = body
         content.sound = UNNotificationSound(named: "notification.wav")
+        if let att = attachmentSound() {
+            content.attachments = [att]
+        }
 
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
         let request = UNNotificationRequest(identifier: title+body, content: content, trigger: trigger)
@@ -36,6 +44,14 @@ class NotificationsManager: NSObject {
                 NSLog(error.localizedDescription)
             }
         }
+    }
+
+    private func attachmentSound() -> UNNotificationAttachment? {
+        if let url = Bundle.main.url(forResource: "kirov_reporting", withExtension: "mp3") {
+            let att = try! UNNotificationAttachment(identifier: "sound", url: url, options: nil)
+            return att
+        }
+        return nil
     }
 
     private func setScheduledNotifications() {
