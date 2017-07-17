@@ -11,13 +11,11 @@ class WordsIC: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
+        setTitle("Words")
+
         let words = fakeWords()
 
-        var rowTypes = [String]()
-        for _ in words {
-            rowTypes.append(kRowType)
-        }
-        tableView.setRowTypes(rowTypes)
+        tableView.setNumberOfRows(words.count, withRowType: kRowType)
         for i in 0..<tableView.numberOfRows {
             let row = tableView.rowController(at: i)
             if let row = row as? WordRow {

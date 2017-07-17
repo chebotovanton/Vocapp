@@ -25,6 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
+
+//        let string = "A short description of the reason for the alert.\nUse this property to specify the title of your notification alert. If this property is set and your app successfully obtained authorization for the alert option, the system tries to display a notification alert.\nTitle strings should be short, usually only a couple of words describing the reason for the notification. In watchOS, the title string is displayed as part of the short look notification interface, which has limited space."
+//        NotificationsManager.shared.setNotificationAfter(interval: 5,
+//                                                         title: "",
+//                                                         subtitle: "",
+//                                                         body: "After weeks of negotiations an agreement was reached ✅\n\nПосле нескольких недель переговоров соглашение было достигнуто")
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {

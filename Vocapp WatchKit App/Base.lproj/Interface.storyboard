@@ -12,16 +12,32 @@
         <!--WordsIC-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="WordsIC" customModule="Vocapp_WatchKit_Extension">
+                <controller alwaysBounce="YES" id="AgC-eL-Hgc" customClass="WordsIC" customModule="Vocapp_WatchKit_Extension">
                     <items>
                         <table alignment="left" id="ekA-EQ-fZo">
                             <items>
-                                <tableRow id="JBJ-bx-7bb" customClass="WordRow" customModule="Vocapp_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="737-Ns-ogb"/>
+                                <tableRow identifier="WordRow" id="JBJ-bx-7bb" customClass="WordRow" customModule="Vocapp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="737-Ns-ogb">
+                                        <items>
+                                            <label alignment="left" text="He canceled our appointment ❌" numberOfLines="0" id="e44-Rc-0Fx">
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                            </label>
+                                            <label alignment="left" text="Он отменил нашу встречу" numberOfLines="0" id="Lni-Q6-jsb">
+                                                <fontDescription key="font" type="system" weight="light" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="e44-Rc-0Fx" id="8xW-Ra-ZiF"/>
+                                        <outlet property="translationLabel" destination="Lni-Q6-jsb" id="GAT-QQ-fmh"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>
                     </items>
+                    <connections>
+                        <outlet property="tableView" destination="ekA-EQ-fZo" id="Gzg-kD-ImG"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
