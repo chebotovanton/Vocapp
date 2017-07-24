@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         Fabric.with([Crashlytics.self])
-        NotificationsManager.shared.authorize()
 
         WCSession.default().delegate = self
         WCSession.default().activate()
@@ -45,7 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
 
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
-        NSLog("success")
     }
 
     func sessionDidDeactivate(_ session: WCSession) {
@@ -55,7 +53,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
 
     func sessionWatchStateDidChange(_ session: WCSession) {
-        NSLog("state changed")
     }
 }
 

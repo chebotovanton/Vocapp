@@ -16,7 +16,11 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         calculationCell = loadCalculationCell()
         collectionView.alwaysBounceVertical = true
 
-        sections = createSections()
+        if DefaultsManager.isFirstLaunch() {
+            firstLaunchProcess()
+        } else {
+            sections = createSections()
+        }
         collectionView.register(UINib(nibName: "WordExampleCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.register(UINib(nibName: "WordTableHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
 
@@ -85,5 +89,61 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+    }
+
+    //MARK: - First Launch Process
+
+    private func firstLaunchProcess() {
+        sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord()])]
+        collectionView.reloadData()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showSecondWord()
+        }
+    }
+
+    private func showSecondWord() {
+        sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord(), secondGreetingWord()])]
+        collectionView.performBatchUpdates({
+            self.collectionView.insertItems(at: [IndexPath(item: 1, section: 0)])
+        }, completion: nil)
+        NotificationsManager.shared.authorize()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.showThirdWord()
+        }
+    }
+
+    private func showThirdWord() {
+        sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord(), secondGreetingWord(), thirdGreetingWord()])]
+        collectionView.performBatchUpdates({
+            self.collectionView.insertItems(at: [IndexPath(item: 2, section: 0)])
+        }, completion: nil)
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            self.showFourthWord()
+        }
+    }
+
+    private func showFourthWord() {
+        sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord(), secondGreetingWord(), thirdGreetingWord(), fourthGreetingWord()])]
+        collectionView.performBatchUpdates({
+            self.collectionView.insertItems(at: [IndexPath(item: 3, section: 0)])
+        }, completion: nil)
+    }
+
+    private func firstGreetingWord() -> WordExample {
+        return WordExample(text: "Hey, it's time to make notifications useful", translation: "Эй, пора сделать пуши полезными")
+    }
+
+    private func secondGreetingWord() -> WordExample {
+        return WordExample(text: "First, let us send you notifications", translation: "Для начала, разреши отправлять тебе уведомления")
+    }
+
+    private func thirdGreetingWord() -> WordExample {
+        return WordExample(text: "Fine.\nNow set the words arriving period using settings tab", translation: "Отлично.\nТеперь выстави в настройках удобный период для получения новых слов")
+    }
+
+    private func fourthGreetingWord() -> WordExample {
+        return WordExample(text: "Enjoy", translation: "Наслаждайтесь")
     }
 }
