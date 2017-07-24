@@ -16,6 +16,19 @@
                     <items>
                         <table alignment="left" id="ekA-EQ-fZo">
                             <items>
+                                <tableRow identifier="HeaderRow" id="trC-95-TR9" customClass="HeaderRow" customModule="Vocapp_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" id="WNK-A3-8qn">
+                                        <items>
+                                            <label alignment="left" text="Day 1" id="avh-HB-m1D">
+                                                <fontDescription key="font" type="system" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="avh-HB-m1D" id="xgY-T2-jNx"/>
+                                    </connections>
+                                </tableRow>
                                 <tableRow identifier="WordRow" id="JBJ-bx-7bb" customClass="WordRow" customModule="Vocapp_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="737-Ns-ogb">
                                         <items>

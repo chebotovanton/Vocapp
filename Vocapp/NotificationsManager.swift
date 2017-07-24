@@ -66,13 +66,14 @@ class NotificationsManager: NSObject {
         let daysGone = DefaultsManager.daysSinceFirstStart()
         let hourLength: TimeInterval = 60 * 60
 
-        let words = WordsLoader.shared.loadWords()
+        let days = WordsLoader.shared.loadWords()
         let firstDate = tomorrow(hour:first)
         let offsetToFirstDate = firstDate.timeIntervalSinceNow
         let firstToLastNotificationsInterval = TimeInterval(last.value - first.value) * hourLength
         let dayLength: TimeInterval = 24 * hourLength
-        for i in daysGone..<words.count {
-            let dayWords = words[i]
+        for i in daysGone..<days.count {
+            let day = days[i]
+            let dayWords = day.words
             var offset = offsetToFirstDate + TimeInterval(i) * dayLength
             let offsetBeetweenNotifications = firstToLastNotificationsInterval / TimeInterval(dayWords.count - 1)
             for word in dayWords {

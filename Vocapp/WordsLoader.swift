@@ -12,9 +12,9 @@ class WordsLoader: NSObject {
 
     static let shared = WordsLoader()
 
-    func loadWords() -> [[WordExample]] {
+    func loadWords() -> [Day] {
         let lines = loadStrings()
-        var result: [[WordExample]] = []
+        var result: [Day] = []
         var i = 0
         var dayWords: [WordExample] = []
         while i < lines.count - 1 {
@@ -22,7 +22,7 @@ class WordsLoader: NSObject {
             let translation = lines[i+1]
 
             if text == "" {
-                result.append(dayWords)
+                result.append(Day(number: result.count, words: dayWords))
                 dayWords = []
                 i += 1
             } else {
@@ -30,8 +30,7 @@ class WordsLoader: NSObject {
                 i += 2
             }
         }
-
-        result.append(dayWords)
+        result.append(Day(number: result.count, words: dayWords))
 
         return result
     }
@@ -49,7 +48,7 @@ class WordsLoader: NSObject {
         return []
     }
 
-    public func wordsSeenByUser() -> [[WordExample]] {
+    public func wordsSeenByUser() -> [Day] {
         let allWords = WordsLoader.shared.loadWords()
         let daysSinceFirstStart = DefaultsManager.daysSinceFirstStart()
         let seenWords = Array(allWords[0...daysSinceFirstStart])

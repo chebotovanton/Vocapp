@@ -1,11 +1,3 @@
-//
-//  WordsVC.swift
-//  Vocapp
-//
-//  Created by Aviasales on 27/06/2017.
-//  Copyright © 2017 vocapp. All rights reserved.
-//
-
 import UIKit
 
 private let reuseIdentifier = "Cell"
@@ -39,13 +31,12 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     }
 
     func createSections() -> [Section] {
-        var words = WordsLoader.shared.wordsSeenByUser()
+        var days = WordsLoader.shared.wordsSeenByUser()
 
         var result: [Section] = []
-        for i in 0..<words.count {
-            let dayWords = words[i]
-            let title = "DAY " + String(i + 1)
-            let section = Section(title: title, examples: dayWords)
+        for i in 0..<days.count {
+            let day = days[i]
+            let section = Section(title: day.title(), examples: day.words)
             result.append(section)
         }
 

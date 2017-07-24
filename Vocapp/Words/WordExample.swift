@@ -1,6 +1,6 @@
 import UIKit
 
-private let kTextKey = "key"
+private let kTextKey = "text"
 private let kTranslationKey = "translation"
 
 class WordExample: NSObject {

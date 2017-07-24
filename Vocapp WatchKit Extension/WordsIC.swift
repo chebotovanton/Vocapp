@@ -5,6 +5,7 @@ import WatchConnectivity
 class WordsIC: WKInterfaceController, WCSessionDelegate {
 
     let kRowType = "WordRow"
+    let kHeaderType = "HeaderRow"
 
     @IBOutlet weak var tableView: WKInterfaceTable!
     private var session: WCSession?
@@ -21,12 +22,27 @@ class WordsIC: WKInterfaceController, WCSessionDelegate {
         super.willActivate()
     }
 
-    private func reloadTable(_ words: [WordExample]) {
-        tableView.setNumberOfRows(words.count, withRowType: kRowType)
-        for i in 0..<tableView.numberOfRows {
-            let row = tableView.rowController(at: i)
-            if let row = row as? WordRow {
-                row.word = words[i]
+    private func reloadTable(_ days: [Day]) {
+
+        var rowTypes: [String] = []
+        for day in days {
+            rowTypes.append(kHeaderType)
+            for _ in day.words {
+                rowTypes.append(kRowType)
+            }
+        }
+        tableView.setRowTypes(rowTypes)
+
+        var index: Int = 0
+        for day in days {
+            let header = tableView.rowController(at: index) as! HeaderRow
+            header.day = day
+            index += 1
+            for i in 0..<day.words.count {
+                let word = day.words[i]
+                let row = tableView.rowController(at: index) as! WordRow
+                row.word = word
+                index += 1
             }
         }
     }
@@ -45,10 +61,10 @@ class WordsIC: WKInterfaceController, WCSessionDelegate {
 
     private func sendMessage() {
         self.session?.sendMessage(["message" : "text"], replyHandler: { (response) in
-            let rawWords = response["seenWords"] as! [[String : String]]
-            var result: [WordExample] = []
-            for rawWord in rawWords {
-                result.append(WordExample.fromDict(rawWord))
+            let rawDays = response["seenWords"] as! [[String : Any]]
+            var result: [Day] = []
+            for rawDay in rawDays {
+                result.append(Day.fromDict(rawDay))
             }
             DispatchQueue.main.async {
                 self.reloadTable(result)

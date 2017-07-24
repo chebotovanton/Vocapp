@@ -39,9 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         let seenWords = WordsLoader.shared.wordsSeenByUser()
         var result: [[String : Any]] = []
         for day in seenWords {
-            for word in day {
-                result.append(word.toDict())
-            }
+            result.append(day.toDict())
         }
         replyHandler(["seenWords" : result])
     }
