@@ -48,4 +48,12 @@ class WordsLoader: NSObject {
         }
         return []
     }
+
+    public func wordsSeenByUser() -> [[WordExample]] {
+        let allWords = WordsLoader.shared.loadWords()
+        let daysSinceFirstStart = DefaultsManager.daysSinceFirstStart()
+        let seenWords = Array(allWords[0...daysSinceFirstStart])
+
+        return seenWords
+    }
 }

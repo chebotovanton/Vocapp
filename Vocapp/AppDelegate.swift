@@ -9,39 +9,55 @@
 import UIKit
 import Fabric
 import Crashlytics
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
 
     var window: UIWindow?
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         Fabric.with([Crashlytics.self])
         NotificationsManager.shared.authorize()
 
+        WCSession.default().delegate = self
+        WCSession.default().activate()
+
         return true
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-
-//        let string = "A short description of the reason for the alert.\nUse this property to specify the title of your notification alert. If this property is set and your app successfully obtained authorization for the alert option, the system tries to display a notification alert.\nTitle strings should be short, usually only a couple of words describing the reason for the notification. In watchOS, the title string is displayed as part of the short look notification interface, which has limited space."
-//        NotificationsManager.shared.setNotificationAfter(interval: 5,
-//                                                         title: "",
-//                                                         subtitle: "",
-//                                                         body: "After weeks of negotiations an agreement was reached ✅\n\nПосле нескольких недель переговоров соглашение было достигнуто")
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
     }
 
 
+    public func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Swift.Void) {
+        let alert = UIAlertController(title: "Message", message: nil, preferredStyle: .alert)
+        let vc = window?.rootViewController
+        alert.show(vc!, sender: nil)
+
+        let seenWords = WordsLoader.shared.wordsSeenByUser()
+        var result: [[String : Any]] = []
+        for day in seenWords {
+            for word in day {
+                result.append(word.toDict())
+            }
+        }
+        replyHandler(["seenWords" : result])
+    }
+
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        NSLog("success")
+    }
+
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+
+    func sessionWatchStateDidChange(_ session: WCSession) {
+        NSLog("state changed")
+    }
 }
 

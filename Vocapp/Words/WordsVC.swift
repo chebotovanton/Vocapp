@@ -39,7 +39,7 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     }
 
     func createSections() -> [Section] {
-        var words = wordsSeenByUser()
+        var words = WordsLoader.shared.wordsSeenByUser()
 
         var result: [Section] = []
         for i in 0..<words.count {
@@ -50,14 +50,6 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         }
 
         return result.reversed()
-    }
-
-    private func wordsSeenByUser() -> [[WordExample]] {
-        let allWords = WordsLoader.shared.loadWords()
-        let daysSinceFirstStart = DefaultsManager.daysSinceFirstStart()
-        let seenWords = Array(allWords[0...daysSinceFirstStart])
-
-        return seenWords
     }
 
     // MARK: UICollectionViewDataSource

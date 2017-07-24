@@ -1,12 +1,7 @@
-//
-//  WordExample.swift
-//  Vocapp
-//
-//  Created by Aviasales on 27/06/2017.
-//  Copyright © 2017 vocapp. All rights reserved.
-//
-
 import UIKit
+
+private let kTextKey = "key"
+private let kTranslationKey = "translation"
 
 class WordExample: NSObject {
     let text: String
@@ -15,5 +10,16 @@ class WordExample: NSObject {
     init(text: String, translation: String) {
         self.text = text
         self.translation = translation
+    }
+
+    public func toDict() -> [String : String] {
+        return [kTextKey : text, kTranslationKey : translation]
+    }
+
+    static public func fromDict(_ dict: [String : String]) -> WordExample {
+        let text = dict[kTextKey]!
+        let translation = dict[kTranslationKey]!
+
+        return WordExample(text: text, translation: translation)
     }
 }
