@@ -3,7 +3,7 @@ import UIKit
 private let reuseIdentifier = "Cell"
 private let headerIdentifier = "Header"
 
-class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, NotificationManagerDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     var calculationCell: WordExampleCell!
@@ -97,7 +97,7 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord()])]
         collectionView.reloadData()
 
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.showSecondWord()
         }
     }
@@ -107,9 +107,9 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         collectionView.performBatchUpdates({
             self.collectionView.insertItems(at: [IndexPath(item: 1, section: 0)])
         }, completion: nil)
-        NotificationsManager.shared.authorize()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            self.showThirdWord()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            NotificationsManager.shared.delegate = self
+            NotificationsManager.shared.authorize()
         }
     }
 
@@ -145,5 +145,14 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     private func fourthGreetingWord() -> WordExample {
         return WordExample(text: "Enjoy", translation: "Наслаждайтесь")
+    }
+
+
+    //MARK: - NotificationManagerDelegate
+
+    func notificationAccessGranted(_ granted: Bool) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.showThirdWord()
+        }
     }
 }

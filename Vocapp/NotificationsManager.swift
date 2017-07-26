@@ -1,24 +1,25 @@
-//
-//  NotificationsManager.swift
-//  Vocapp
-//
-//  Created by Aviasales on 27/06/2017.
-//  Copyright © 2017 vocapp. All rights reserved.
-//
-
 import UIKit
 import UserNotifications
+
+protocol NotificationManagerDelegate: class {
+    func notificationAccessGranted(_ granted: Bool)
+}
 
 class NotificationsManager: NSObject {
 
     static let shared = NotificationsManager()
 
+    weak var delegate: NotificationManagerDelegate?
+
     func authorize() {
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) { (success, error) in
             DispatchQueue.main.async {
-                if DefaultsManager.isFirstLaunch() {
-                    self.setScheduledNotifications()
+                if success {
+                    if DefaultsManager.isFirstLaunch() {
+                        self.setScheduledNotifications()
+                    }
                 }
+                self.delegate?.notificationAccessGranted(success)
             }
         }
     }
