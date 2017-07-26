@@ -7,8 +7,8 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     @IBOutlet weak var collectionView: UICollectionView!
     var calculationCell: WordExampleCell!
-
     var sections: [Section] = []
+    let kLineSpacing: CGFloat = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,17 +16,18 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         calculationCell = loadCalculationCell()
         collectionView.alwaysBounceVertical = true
 
-        if DefaultsManager.isFirstLaunch() {
-            firstLaunchProcess()
-        } else {
-            sections = createSections()
-        }
         collectionView.register(UINib(nibName: "WordExampleCell", bundle: nil), forCellWithReuseIdentifier: reuseIdentifier)
         collectionView.register(UINib(nibName: "WordTableHeader", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier)
 
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         collectionView?.collectionViewLayout = layout
+
+        if DefaultsManager.isFirstLaunch() {
+            firstLaunchProcess()
+        } else {
+            sections = createSections()
+        }
     }
 
     func loadCalculationCell() -> WordExampleCell {
@@ -47,6 +48,13 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
         return result.reversed()
     }
 
+    private func updateTopInset() {
+        UIView.animate(withDuration: 0.3) { 
+            let topInset = self.collectionView.frame.height - self.collectionView.contentSize.height - self.kLineSpacing
+            self.collectionView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
+        }
+    }
+
     // MARK: UICollectionViewDataSource
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -59,7 +67,6 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! WordExampleCell
-
         let example = sections[indexPath.section].examples[indexPath.item]
         cell.setup(example)
     
@@ -96,6 +103,7 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     private func firstLaunchProcess() {
         sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord()])]
         collectionView.reloadData()
+        updateTopInset()
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             self.showSecondWord()
@@ -104,6 +112,7 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     private func showSecondWord() {
         sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord(), secondGreetingWord()])]
+        updateTopInset()
         collectionView.performBatchUpdates({
             self.collectionView.insertItems(at: [IndexPath(item: 1, section: 0)])
         }, completion: nil)
@@ -115,6 +124,7 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     private func showThirdWord() {
         sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord(), secondGreetingWord(), thirdGreetingWord()])]
+        updateTopInset()
         collectionView.performBatchUpdates({
             self.collectionView.insertItems(at: [IndexPath(item: 2, section: 0)])
         }, completion: nil)
@@ -126,6 +136,7 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     private func showFourthWord() {
         sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord(), secondGreetingWord(), thirdGreetingWord(), fourthGreetingWord()])]
+        updateTopInset()
         collectionView.performBatchUpdates({
             self.collectionView.insertItems(at: [IndexPath(item: 3, section: 0)])
         }, completion: nil)
