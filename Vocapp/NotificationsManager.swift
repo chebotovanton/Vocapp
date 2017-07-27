@@ -8,7 +8,7 @@ protocol NotificationManagerDelegate: class {
 class NotificationsManager: NSObject {
 
     static let shared = NotificationsManager()
-
+    let hourLength: TimeInterval = 60 * 60
     weak var delegate: NotificationManagerDelegate?
 
     func authorize() {
@@ -65,11 +65,9 @@ class NotificationsManager: NSObject {
         cancelAllNotifications()
 
         let daysGone = DefaultsManager.daysSinceFirstStart()
-        let hourLength: TimeInterval = 60 * 60
 
         let days = WordsLoader.shared.loadWords()
-        let firstDate = tomorrow(hour:first)
-        let offsetToFirstDate = firstDate.timeIntervalSinceNow
+        let offsetToFirstDate = timeToFirstNotification(first)
         let firstToLastNotificationsInterval = TimeInterval(last.value - first.value) * hourLength
         let dayLength: TimeInterval = 24 * hourLength
         for i in daysGone..<days.count {
@@ -96,6 +94,20 @@ class NotificationsManager: NSObject {
         nowComponents.second = 0
 
         return calendar.date(from: nowComponents)!
+    }
+
+    private func timeToFirstNotification(_ first: HourObject) -> TimeInterval {
+        let firstDate = tomorrow(hour:first)
+
+        return firstDate.timeIntervalSinceNow
+    }
+
+    func hoursToFirstNotification() -> Int {
+        let first = DefaultsManager.firstHour()
+        let interval = timeToFirstNotification(first)
+
+
+        return Int(interval / hourLength) + 1
     }
 
     func cancelAllNotifications() {

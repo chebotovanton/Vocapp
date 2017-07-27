@@ -50,7 +50,8 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     private func updateTopInset() {
         UIView.animate(withDuration: 0.3) { 
-            let topInset = self.collectionView.frame.height - self.collectionView.contentSize.height - self.kLineSpacing
+            var topInset = self.collectionView.frame.height - self.collectionView.contentSize.height - self.kLineSpacing
+            topInset = max(0, topInset)
             self.collectionView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
         }
     }
@@ -136,10 +137,10 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
 
     private func showFourthWord() {
         sections = [Section(title: "Greetings, stranger!", examples: [firstGreetingWord(), secondGreetingWord(), thirdGreetingWord(), fourthGreetingWord()])]
-        updateTopInset()
         collectionView.performBatchUpdates({
             self.collectionView.insertItems(at: [IndexPath(item: 3, section: 0)])
         }, completion: nil)
+        updateTopInset()
     }
 
     private func firstGreetingWord() -> WordExample {
@@ -155,7 +156,11 @@ class WordsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataS
     }
 
     private func fourthGreetingWord() -> WordExample {
-        return WordExample(text: "Enjoy", translation: "Наслаждайтесь")
+        let hours = NotificationsManager.shared.hoursToFirstNotification()
+        let hoursString = String(hours)
+        let text = "Relax. The next word is a-coming in about " + hoursString + " hours"
+        let translation = "Расслабьтесь. Первое слово придет примерно через " + hoursString + " часов"
+        return WordExample(text: text, translation: translation)
     }
 
 
