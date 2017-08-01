@@ -1,11 +1,3 @@
-//
-//  HourCell.swift
-//  Vocapp
-//
-//  Created by Anton Chebotov on 02/07/2017.
-//  Copyright © 2017 vocapp. All rights reserved.
-//
-
 import UIKit
 
 class HourCell: UICollectionViewCell {
@@ -15,18 +7,22 @@ class HourCell: UICollectionViewCell {
     func setup(_ hour: HourObject) {
         label.text = String(hour.value)
         label.alpha = 0.2
-
-//        isSelected = (hour.value == DefaultsManager.firstHour().value || hour.value == DefaultsManager.lastHour().value)
     }
 
     override var isSelected: Bool {
         didSet {
+            let newAlpha: CGFloat
+            let newFont: UIFont
             if isSelected {
-                label.alpha = 1.0
-                label.font = UIFont.systemFont(ofSize: 80, weight: UIFontWeightMedium)
+                newAlpha = 1.0
+                newFont = UIFont.systemFont(ofSize: 80, weight: UIFontWeightMedium)
             } else {
-                label.alpha = 0.2
-                label.font = UIFont.systemFont(ofSize: 80, weight: UIFontWeightLight)
+                newAlpha = 0.2
+                newFont = UIFont.systemFont(ofSize: 80, weight: UIFontWeightLight)
+            }
+            UIView.animate(withDuration: 0.3) {
+                self.label.font = newFont
+                self.label.alpha = newAlpha
             }
         }
     }

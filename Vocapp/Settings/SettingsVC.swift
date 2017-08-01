@@ -11,7 +11,6 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class SettingsVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
 
     @IBOutlet weak var fromCollectionView: UICollectionView!
     @IBOutlet weak var toCollectionView: UICollectionView!
