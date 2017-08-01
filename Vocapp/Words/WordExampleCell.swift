@@ -17,7 +17,7 @@ class WordExampleCell: UICollectionViewCell {
         super.awakeFromNib()
 
         contentView.layer.cornerRadius = 12
-        let value = CGFloat(129.0 / 255.0)
+        let value = CGFloat(53.0 / 255.0)
         contentView.backgroundColor = UIColor(red: value, green: value, blue: value, alpha: 0.7)
     }
 

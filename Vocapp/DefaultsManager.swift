@@ -48,10 +48,6 @@ class DefaultsManager: NSObject {
     }
 
     static func isFirstLaunch() -> Bool {
-        return true
-
-        //WARNING: debug purpose
-
         if UserDefaults.standard.data(forKey: kFirstLaunchDateKey) != nil {
             return false
         }
