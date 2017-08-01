@@ -11,11 +11,14 @@ class HourCell: UICollectionViewCell {
 
     override var isSelected: Bool {
         didSet {
+            if isSelected && oldValue == false {
+                UISelectionFeedbackGenerator().selectionChanged()
+            }
             let newAlpha: CGFloat
             let newFont: UIFont
             if isSelected {
                 newAlpha = 1.0
-                newFont = UIFont.systemFont(ofSize: 80, weight: UIFontWeightMedium)
+                newFont = UIFont.systemFont(ofSize: 80, weight: UIFontWeightSemibold)
             } else {
                 newAlpha = 0.2
                 newFont = UIFont.systemFont(ofSize: 80, weight: UIFontWeightLight)
